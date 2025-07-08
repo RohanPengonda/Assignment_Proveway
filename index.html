@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="heading-with-lines">
+        <span class="text">YAY! It's BOGO</span>
+      </div>
+      <div class="bundle-opt">
+        <!-- 1st Pair  -->
+        <div class="box">
+          <div class="top-row">
+            <div class="left-group">
+              <input type="radio" name="pair1" id="pair1" />
+              <div class="content">
+                <div style="display: flex; align-items: center; gap: 8px;">
+                  <span class="pair" style="font-weight: 700; font-size: 16px;">1 Unit</span>
+                  <span class="discount-pill">10% Off</span>
+                </div>
+                <span class="standard-price">Standard Price</span>
+              </div>
+            </div>
+            <div class="right-group" style="align-items: flex-end;">
+              <span class="price" style="font-size: 17px; font-weight: 600;">$10.00 USD</span>
+              <s class="strike" style="font-size: 13px;">$24.00 USD</s>
+            </div>
+          </div>
+          <div class="detail hidden">
+            <!-- <label class="num">No</label> -->
+            <label class="num">Size</label>
+            <label class="num">Color</label>
+          </div>
+          <div class="details hidden"></div>
+        </div>
+
+        <!-- 2nd Pair  -->
+        <div class="box active most-popular-box">
+          <div class="most-popular-badge">MOST POPULAR</div>
+          <div class="top-row">
+            <div class="left-group">
+              <input type="radio" name="pair2" id="pair2" checked />
+              <div class="content">
+                <div style="display: flex; align-items: center; gap: 8px;">
+                  <span class="pair" style="font-weight: 700; font-size: 16px;">2 Unit</span>
+                  <span class="discount-pill">20% Off</span>
+                </div>
+              </div>
+            </div>
+            <div class="right-group" style="align-items: flex-end;">
+              <span class="price" style="font-size: 17px; font-weight: 600;">$18.00 USD</span>
+              <s class="strike" style="font-size: 13px;">$24.00 USD</s>
+            </div>
+          </div>
+          <!-- details-grid removed; will be injected by JS -->
+        </div>
+
+        <!-- 3rd Pair  -->
+        <div class="box">
+          <div class="top-row">
+            <div class="left-group">
+              <input type="radio" name="pair3" id="pair3" />
+              <div class="content">
+                <div style="display: flex; align-items: center; gap: 8px;">
+                  <span class="pair" style="font-weight: 700; font-size: 16px;">3 Unit</span>
+                  <span class="discount-pill">30% Off</span>
+                </div>
+              </div>
+            </div>
+            <div class="right-group" style="align-items: flex-end;">
+              <span class="price" style="font-size: 17px; font-weight: 600;">$24.00 USD</span>
+              <s class="strike" style="font-size: 13px;">$24.00 USD</s>
+            </div>
+          </div>
+        </div>
+
+        <div class="summary new-summary">
+          <span class="free-delivery">Free Delivery</span>
+          <span class="total-price">Total : $18.00 USD</span>
+        </div>
+
+        <button class="cart">+ Add to Cart</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
