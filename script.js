@@ -1,7 +1,6 @@
 const boxes = document.querySelectorAll('.box');
 
 function showDetailsForBox(box) {
-  // Remove any existing details-grid
   const oldGrid = box.querySelector('.details-grid');
   if (oldGrid) oldGrid.remove();
 
@@ -25,11 +24,21 @@ function showDetailsForBox(box) {
     <div class="option-row">
       <label>#2</label>
       <select><option>S</option><option>M</option><option>L</option><option>XL</option></select>
-      <select><option>Colour</option><option>Black</option><option>White</option><option>Red</option></select>
+      <select><option>Color</option><option>Black</option><option>White</option><option>Red</option></select>
     </div>
   `;
   box.appendChild(grid);
 }
+
+// Prevent box click when interacting with select elements
+boxes.forEach(box => {
+  box.addEventListener('click', function(event) {
+    if (event.target.tagName.toLowerCase() === 'select') {
+      event.stopPropagation();
+      return;
+    }
+  }, true);
+});
 
 boxes.forEach(box => {
   box.addEventListener('click', () => {
@@ -49,7 +58,8 @@ boxes.forEach(box => {
   });
 });
 
-// On page load, show details for the default active box (unit 2)
+// On page load, default active box as unit 2
+
 const defaultActive = document.querySelector('.box.active');
 if (defaultActive) {
   showDetailsForBox(defaultActive);

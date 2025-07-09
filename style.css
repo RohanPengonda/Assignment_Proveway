@@ -284,3 +284,12 @@ select:focus {
   letter-spacing: 0.5px;
 }
 
+.powered-by {
+  text-align: end;
+  color: #b0b0b0;
+  font-size: 15px;
+  font-style: italic;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
